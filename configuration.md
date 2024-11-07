@@ -87,7 +87,7 @@ Pour chaque nouvel épisode, répétez les étapes ci-dessus en remplaçant `X` 
   git commit -m "Ajout des modifications pour l'épisode 2"
   git push -u origin episode_2
   ```
-
+  
 - **Épisode 3 :**
   ```sh
   git checkout -b episode_3
