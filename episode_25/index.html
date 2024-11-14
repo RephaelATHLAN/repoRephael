@@ -1,1 +1,109 @@
 <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemple HTML avec Formulaires et Divers éléments</title>
+    <style>
+        body {background-color: powderblue;}
+        h1 {color: rgb(17, 130, 161);}
+        th {color: yellowgreen;}
+        td {color: rgb(255, 6, 6);}
+    </style>
+</head>
+<body>
+    <h1>Exemple de Table et Formulaire avec Plusieurs Éléments</h1>
+
+    <!-- Table -->
+    <table border="2">
+        <tr>
+            <th>Bonjour</th>
+            <th>Bon après-midi</th>
+            <th>Bonsoir</th>
+        </tr>
+        <tr>
+            <td>Jean de la Fontaine</td>
+            <td>Victor Hugo</td>
+            <td>Albert Camus</td>
+        </tr>
+        <tr>
+            <td>France</td>
+            <td>Belgique</td>
+            <td>Suisse</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <!-- Formulaire avec nouveaux éléments -->
+    <form action="/submit_form" method="post">
+        <label for="fname">Prénom :</label><br>
+        <input type="text" id="fname" name="fname"><br>
+
+        <label for="lname">Nom de famille :</label><br>
+        <input type="text" id="lname" name="lname"><br>
+
+        <!-- Nouveau champ input -->
+        <input type="number" id="age" name="age" placeholder="Age"><br>
+
+        <!-- Nouveau champ label + select -->
+        <label for="country">Choisissez votre pays :</label><br>
+        <select id="country" name="country">
+            <option value="france">France</option>
+            <option value="belgium">Belgique</option>
+            <option value="switzerland">Suisse</option>
+        </select><br>
+
+        <!-- Nouveau champ textarea -->
+        <label for="message">Votre message :</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" placeholder="Écrivez votre message ici..."></textarea><br>
+
+        <!-- Nouveau champ button -->
+        <button type="submit">Envoyer</button><br>
+
+        <!-- Nouveau champ fieldset avec legend -->
+        <fieldset>
+            <legend>Informations supplémentaires</legend>
+            <label for="newsletter">Inscription à la newsletter :</label>
+            <input type="checkbox" id="newsletter" name="newsletter" value="oui">
+            <label for="newsletter">Oui, je veux recevoir la newsletter</label><br>
+        </fieldset>
+
+        <!-- Nouveau champ datalist -->
+        <label for="colors">Choisissez une couleur :</label>
+        <input list="colors" id="color" name="color" placeholder="Choisir une couleur">
+        <datalist id="colors">
+            <option value="Rouge">
+            <option value="Bleu">
+            <option value="Vert">
+            <option value="Jaune">
+        </datalist><br>
+
+        <!-- Nouveau champ output -->
+        <label for="price">Prix :</label>
+        <input type="range" id="price" name="price" min="0" max="100">
+        <output for="price" id="priceOutput">0</output><br>
+
+        <!-- Nouveau champ optgroup pour groupement d'options -->
+        <label for="fruit">Choisissez un fruit :</label><br>
+        <select id="fruit" name="fruit">
+            <optgroup label="Agrumes">
+                <option value="orange">Orange</option>
+                <option value="citron">Citron</option>
+            </optgroup>
+            <optgroup label="Fruits rouges">
+                <option value="fraise">Fraise</option>
+                <option value="cerise">Cerise</option>
+            </optgroup>
+        </select><br>
+
+    </form>
+
+    <br>
+
+    <!-- Div avec classes et id -->
+    <div class="ma-classe">Contenu</div>
+    <div id="ma-classe">Contenu</div>
+
+</body>
+</html>
